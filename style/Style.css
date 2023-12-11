@@ -1,0 +1,102 @@
+@font-face {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  src: url(/style/fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+:root {
+  --bgc: linear-gradient(135deg, #461A96, #D516D2);
+  --black: #000;
+  --grey: #333;
+  --backoperator: #f1a33c;
+  --ac-back: #a5a5a5;
+}
+body {
+  background: var(--bgc);
+  height: 100vh;
+  display: block;
+}
+html {
+  font-size: 62.5%;
+}
+.calculator {
+  background: black;
+  border-radius: 50px;
+  margin: 5rem auto;
+  height: 860px;
+  padding: 20px;
+  position: relative;
+  width: 554px;
+}
+.top-container {
+  display: flex;
+  height: 250px;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+.value {
+  background: var(--black);
+  color: white;
+  font-size: 150px;
+  font-weight: 300;
+  height: 160px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  text-align: right;
+  border: none;
+  outline: none;
+}
+.buttons-container {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1ft);
+  font-family: "Montserrat", sans-serif;
+}
+.button {
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  font-size: 45px;
+  height: 110px;
+  justify-content: center;
+  transition: filter 0.3s;
+  width: 110px;
+  border: none;
+  color: white;
+  background: var(--grey);
+}
+.ac,
+.pm,
+.percent {
+  background: var(--ac-back);
+}
+.ac:active,
+.pm:active {
+  color: var(--backoperator);
+}
+.btn:active,
+.btn:focus {
+  filter: brightness(120%);
+}
+.division,
+.multiplication,
+.subtraction,
+.addition,
+.equal {
+  background: var(--backoperator);
+}
+.number-0 {
+  background: var(--grey);
+  border-radius: 55px;
+  grid-column: 1 / span 2;
+  justify-content: flex-start;
+  padding-left: 43px;
+  width: 250px;
+}
